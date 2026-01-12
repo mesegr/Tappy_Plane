@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-class_name Pipes
 
 var _gravity: float = ProjectSettings.get('physics/2d/default_gravity')
 var _jumped: bool = false

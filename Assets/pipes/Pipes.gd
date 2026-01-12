@@ -1,6 +1,8 @@
 extends Node2D
 
-const SPEED: float = 120
+class_name Pipes
+
+const SPEED: float = 130
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
