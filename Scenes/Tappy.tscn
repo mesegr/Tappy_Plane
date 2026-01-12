@@ -42,7 +42,7 @@ script = ExtResource("1_ng7lx")
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_l8cbw")
 animation = &"TappyFlyAnim"
-frame_progress = 0.7663485
+frame_progress = 0.9002875
 
 [node name="TappyMainCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_re6bh")

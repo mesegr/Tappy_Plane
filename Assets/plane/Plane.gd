@@ -5,6 +5,8 @@ var _jumped: bool = false
 
 const JumpPower: float = -350
 
+@onready var tappy_sprite: AnimatedSprite2D = $TappySprite
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed('jump'):
 		_jumped = true
@@ -17,5 +19,13 @@ func _physics_process(delta: float) -> void:
 	if _jumped:
 		velocity.y = JumpPower
 		_jumped = false
+		
+	if is_on_floor() or is_on_ceiling(): 
+		die()
 	
 	move_and_slide()
+	
+func die() -> void:
+	set_physics_process(false)
+	tappy_sprite.stop()
+	
