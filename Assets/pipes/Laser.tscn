@@ -45,7 +45,7 @@ _data = {
 [node name="Laser" type="Area2D"]
 
 [node name="LaserSprite" type="Sprite2D" parent="."]
-scale = Vector2(0.85, 7)
+scale = Vector2(1, 7)
 texture = ExtResource("1_pgdbd")
 
 [node name="LAserCollision" type="CollisionShape2D" parent="."]
