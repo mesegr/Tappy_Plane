@@ -10,13 +10,16 @@ script = ExtResource("1_fo7du")
 [node name="Laser" parent="." instance=ExtResource("2_jiutq")]
 
 [node name="PipeDOWN" parent="." instance=ExtResource("1_ufmv2")]
-position = Vector2(0, 177)
+position = Vector2(0, 214)
 
 [node name="PipeUP" parent="." instance=ExtResource("1_ufmv2")]
-position = Vector2(0, -177)
+position = Vector2(0, -214)
 rotation = 3.1415927
 
 [node name="ScreenNotifier" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(62, -1)
 
+[connection signal="body_entered" from="Laser" to="." method="_on_laser_body_entered"]
+[connection signal="body_entered" from="PipeDOWN" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="PipeUP" to="." method="_on_pipe_body_entered"]
 [connection signal="screen_exited" from="ScreenNotifier" to="." method="_on_screen_notifier_screen_exited"]

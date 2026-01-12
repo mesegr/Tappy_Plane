@@ -13,5 +13,5 @@ position = Vector2(0, -3)
 shape = SubResource("WorldBoundaryShape2D_se12d")
 
 [node name="Lower" type="CollisionShape2D" parent="."]
-position = Vector2(0, 287)
+position = Vector2(5, 491)
 shape = SubResource("WorldBoundaryShape2D_725b1")

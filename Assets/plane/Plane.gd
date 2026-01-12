@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Tappy
 
 var _gravity: float = ProjectSettings.get('physics/2d/default_gravity')
 var _jumped: bool = false
@@ -27,6 +28,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func die() -> void:
-	set_physics_process(false)
-	tappy_sprite.stop()
+	get_tree().paused = true
 	

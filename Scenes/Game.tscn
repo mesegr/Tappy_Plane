@@ -8,8 +8,8 @@
 [node name="Game" type="Node"]
 script = ExtResource("1_kldst")
 
-[node name="Rocks2" type="Sprite2D" parent="."]
-position = Vector2(128, 122)
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(123, 314)
 texture = ExtResource("1_iukft")
 
 [node name="Tappy" parent="." instance=ExtResource("2_gl6un")]
@@ -21,13 +21,13 @@ position = Vector2(223, 0)
 [node name="PipesHolder" type="Node" parent="."]
 
 [node name="UpperSpawn" type="Marker2D" parent="."]
-position = Vector2(530, 190)
+position = Vector2(530, 209)
 
 [node name="LoweSpawn" type="Marker2D" parent="."]
-position = Vector2(530, 450)
+position = Vector2(530, 633)
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 1.765
+wait_time = 1.25
 autostart = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
