@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmfhac8wxebpo"]
+
+[ext_resource type="Texture2D" uid="uid://dkscwo8t71kel" path="res://Assets/plane/planes_sheet.png" id="1_re6bh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng7lx"]
+atlas = ExtResource("1_re6bh")
+region = Rect2(0, 0, 88, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qif8"]
+atlas = ExtResource("1_re6bh")
+region = Rect2(88, 0, 88, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxf6s"]
+atlas = ExtResource("1_re6bh")
+region = Rect2(176, 0, 88, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8cbw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng7lx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qif8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxf6s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Tappy" type="CharacterBody2D"]
+
+[node name="TappyMainCollision" type="CollisionShape2D" parent="."]
+
+[node name="TappySprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l8cbw")
+frame_progress = 0.48456132
