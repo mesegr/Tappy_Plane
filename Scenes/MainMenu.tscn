@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwkcw1i1alel6"]
+[gd_scene load_steps=13 format=3 uid="uid://cwkcw1i1alel6"]
 
+[ext_resource type="Script" uid="uid://b1wloxceomdwj" path="res://Scenes/main_menu.gd" id="1_8um5k"]
 [ext_resource type="Texture2D" uid="uid://dp4emrfhpjalw" path="res://Assets/background/sky.png" id="1_853f1"]
 [ext_resource type="FontFile" uid="uid://tmkjrnp1ik5y" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="2_8saeu"]
 [ext_resource type="LabelSettings" uid="uid://dpg8fpj20f2e4" path="res://Resources/MainMenu.tres" id="3_8saeu"]
 [ext_resource type="AudioStream" uid="uid://dak7y2fxgtt30" path="res://Assets/audio/bgm_menu.mp3" id="4_ghw46"]
+[ext_resource type="AudioStream" uid="uid://bgdx7c1ubr5r0" path="res://Assets/audio/score.wav" id="5_df05h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ghw46"]
 font = ExtResource("2_8saeu")
@@ -95,6 +97,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8um5k")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -161,8 +164,8 @@ label_settings = ExtResource("3_8saeu")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ghw46")
-volume_db = -33.45
-pitch_scale = 0.82
+volume_db = -20.07
+pitch_scale = 0.77
 autoplay = true
 
 [node name="PlayAnimation" type="AnimationPlayer" parent="."]
@@ -207,3 +210,7 @@ text = "Press Space
 to play"
 label_settings = SubResource("LabelSettings_8um5k")
 horizontal_alignment = 1
+
+[node name="StartGame" type="AudioStreamPlayer" parent="PlayWrapperContainer"]
+stream = ExtResource("5_df05h")
+pitch_scale = 0.51
