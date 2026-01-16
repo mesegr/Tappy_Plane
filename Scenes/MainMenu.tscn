@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwkcw1i1alel6"]
+[gd_scene load_steps=15 format=3 uid="uid://cwkcw1i1alel6"]
 
 [ext_resource type="Script" uid="uid://b1wloxceomdwj" path="res://Scenes/main_menu.gd" id="1_8um5k"]
 [ext_resource type="Texture2D" uid="uid://dp4emrfhpjalw" path="res://Assets/background/sky.png" id="1_853f1"]
@@ -6,6 +6,7 @@
 [ext_resource type="LabelSettings" uid="uid://dpg8fpj20f2e4" path="res://Resources/MainMenu.tres" id="3_8saeu"]
 [ext_resource type="AudioStream" uid="uid://dak7y2fxgtt30" path="res://Assets/audio/bgm_menu.mp3" id="4_ghw46"]
 [ext_resource type="AudioStream" uid="uid://bgdx7c1ubr5r0" path="res://Assets/audio/score.wav" id="5_df05h"]
+[ext_resource type="Shader" uid="uid://cuoy4uifclmv" path="res://Scenes/MainMenu.gdshader" id="7_xim88"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ghw46"]
 font = ExtResource("2_8saeu")
@@ -89,6 +90,10 @@ font_size = 60
 font_color = Color(0.7882271, 0.9808212, 1, 1)
 outline_size = 10
 outline_color = Color(0.12269699, 2.8878452e-07, 0.67827266, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_koqhg"]
+shader = ExtResource("7_xim88")
+shader_parameter/progress = 1.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -214,3 +219,14 @@ horizontal_alignment = 1
 [node name="StartGame" type="AudioStreamPlayer" parent="PlayWrapperContainer"]
 stream = ExtResource("5_df05h")
 pitch_scale = 0.51
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_koqhg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
