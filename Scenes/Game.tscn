@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1m8h47a5linp"]
 
-[ext_resource type="Texture2D" uid="uid://bgq3wd2xryovg" path="res://Assets/background/rocks_2.png" id="1_iukft"]
 [ext_resource type="Script" uid="uid://kiyd7ri65rv" path="res://Scenes/game.gd" id="1_kldst"]
+[ext_resource type="PackedScene" uid="uid://vtxlyom8jmx0" path="res://Scenes/parallax.tscn" id="2_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://cmfhac8wxebpo" path="res://Scenes/Tappy.tscn" id="2_gl6un"]
 [ext_resource type="PackedScene" uid="uid://xs3eir5od2u4" path="res://Scenes/barrier.tscn" id="3_j5yw3"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_kldst")
 
-[node name="background" type="Sprite2D" parent="."]
-position = Vector2(123, 314)
-texture = ExtResource("1_iukft")
+[node name="Parallax" parent="." instance=ExtResource("2_b2bpf")]
+position = Vector2(-9.000001, 2.0000002)
+scale = Vector2(0.85, 0.85)
 
 [node name="Tappy" parent="." instance=ExtResource("2_gl6un")]
 position = Vector2(124, 221)

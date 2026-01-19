@@ -29,4 +29,5 @@ func _physics_process(delta: float) -> void:
 	
 func die() -> void:
 	get_tree().paused = true
+	ScoreManager.high_score = 
 	
